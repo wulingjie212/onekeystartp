@@ -1,0 +1,22 @@
+<%inherit file="/base.html"/>
+
+<%block name="content">
+   <div class="container" style="padding-top: 10px">
+        <fieldset>
+            <legend>查询条件</legend>
+            <div class="fieldset_box">
+                <div><label>主机IP：</label><input id="ip_search" type="text"></div>
+                <div class="right_box">
+                    <button id="add_business" class="btn btn-sm btn-info" style="margin-left: 10px">添加业务</button>
+                </div>
+                <div class="right_box">
+                    <button id="search_btn" class="btn btn-sm btn-primary">搜索</button>
+                </div>
+            </div>
+        </fieldset>
+        <div id="table_container"></div>
+    </div>
+<script src="${STATIC_URL}js/home.js" type="text/javascript"></script>
+</%block>
+
+

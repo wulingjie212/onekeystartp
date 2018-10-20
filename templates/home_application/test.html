@@ -1,0 +1,39 @@
+<%inherit file="/base.html"/>
+
+<%block name="content">
+    <style type="text/css">
+        #footer{
+            position: relative;
+            bottom: -40px;
+        }
+    </style>
+    <div>hello world</div>
+<div id="grid"></div>
+<script>
+
+    var data = [{ name: "Jane Doe", age: 30 },{ name: "John Doe", age: 33 }];
+$.ajax({
+    url:'http://dev.canway.club:8008/get_demo_data/',
+    type:'post',
+    data:{'name':'roger'},
+    success:function (res) {
+        $("#grid").kendoGrid({
+  columns: [
+    { field: "name" },
+    { field: "value" }
+  ],
+  dataSource: {
+    data: res['data']
+  }
+});
+    }
+})
+
+
+
+
+</script>
+</%block>
+<%block name='footerline'>
+    <hr class="guide-cutting-line">
+</%block>
